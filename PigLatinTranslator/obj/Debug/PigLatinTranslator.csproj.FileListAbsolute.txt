@@ -1,0 +1,8 @@
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\bin\Debug\PigLatinTranslator.dll
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\bin\Debug\PigLatinTranslator.pdb
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\bin\Debug\Lab06.exe
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\bin\Debug\Lab06.pdb
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\obj\Debug\PigLatinTranslator.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\obj\Debug\PigLatinTranslator.dll
+C:\Users\Thomas\Desktop\Programming\Version-Control\Lab06\PigLatinTranslator\obj\Debug\PigLatinTranslator.pdb
