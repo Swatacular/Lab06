@@ -10,6 +10,7 @@ namespace Lab06
     {
 
         public static string vowels = "aeiouAEIOU";
+        public static string specialCharcters = ",./<>?;:[]{})(*&^%$#@!1234567890-=+_";
 
         static void Main(string[] args)
         {
@@ -41,7 +42,15 @@ namespace Lab06
         //Input
         static string getInput()
         {
-            return Console.ReadLine();
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (input.Trim() != "")
+                {
+                    return input;
+                }
+                Console.Write("Invalid Input, Please Retry: ");
+            }
         }
 
         //Processing
@@ -59,7 +68,7 @@ namespace Lab06
 
             //since after every word is a space, we need to trim it.
             //we could lower the 
-            finalString = ((finalSentance.ToString()).ToLower()).TrimEnd();
+            finalString = (finalSentance.ToString()).TrimEnd();
             return CapitalizeFirstLetter(finalString);
 
             //return finalString;
@@ -77,17 +86,22 @@ namespace Lab06
         
         public static string TranslateWord(string word)
         {
+            
+            
             string subStringToKeep;
             string subStringToMove;
             string translatedString = "";
 
+            for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
+            {
+                if (specialCharcters.Contains(word[letterIndex]))
+                {
+                    return word;
+                }
+            }
             if (positionOf1stVowel(word) == -1)
             {
-                //probably could work on this a little more.. but whatev...
-                Console.Clear();
-                Console.WriteLine("There are no vowels!!! I break.");
-                Console.ReadKey();
-                Environment.Exit(0);
+                return word;
             }
 
             //gets the second half of the word
@@ -109,6 +123,14 @@ namespace Lab06
             else translatedString += "way";
 
 
+            translatedString = translatedString.ToLower();
+
+            //checks if the word had a title case.
+            if (word[0].ToString() != word[0].ToString().ToLower())
+            {
+                return CapitalizeFirstLetter(translatedString);
+            }
+
             return translatedString;
         }
 
@@ -117,7 +139,7 @@ namespace Lab06
             //checking each position for a vowel
             for (int letterIndex = 0; letterIndex < word.Length; letterIndex++)
             {
-                if (vowels.Contains(word.ElementAt(letterIndex)))
+                if (vowels.Contains(word[letterIndex]))
                 {
                     return letterIndex;
                 }
