@@ -19,10 +19,10 @@ namespace PigLatinTranslator
         [TestMethod]
         public void translateWords()
         {
-            string RealWord = Program.TranslateWords("this sentance");
+            string RealWord = Program.TranslateWords("this sentence");
             string ExpectedWord = "Isthay entencesay";
-            Assert.AreEqual(ExpectedWord, RealWord);
-
+            Assert.AreEqual(ExpectedWord, RealWord.Trim());
+          
         }
         [TestMethod]
         public void translateWordsToLower()

@@ -13,14 +13,25 @@ namespace Lab06
 
         static void Main(string[] args)
         {
-            string input = getInput();
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Welcome to the Pig Latin Translator!");
+                Console.Write("Line to translate: ");
+                string input = getInput();
 
-            Console.WriteLine(input);
-
-            Console.WriteLine(TranslateWords(input));
-
-            Console.ReadKey();
-
+                Console.WriteLine();
+                Console.WriteLine("Press any key to translate. . .");
+                Console.Clear();
+                Console.Write("Your translated line: ");
+                Console.WriteLine(TranslateWords(input));
+                Console.WriteLine();
+                Console.Write("Continue? (y/n): ");
+                if (Console.ReadLine() == "n") break;
+                Console.WriteLine();
+                Console.WriteLine("Restarting, press any key to continue. . .");
+                Console.ReadKey();
+            }
         }
 
 
